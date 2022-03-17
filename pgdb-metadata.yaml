@@ -1,0 +1,19 @@
+name: nf.core pgdb
+identifier: WF_b74997.55
+description: The ProteoGenomics database generation workflow creates different protein
+  databases for ProteoGenomics data analysis.
+softwareVersion:
+  versionName: 1.0.0
+metadataStatus: Released
+workflowStatus: Released
+workflowFile: pgdb.wdl
+repoName: nfcore-pgdb
+gitTag: master
+inputsTemplate: inputs.json
+executable: true
+current: true
+codeRepository:
+  URL: https://github.com/truwl/nfcore-pgdb/
+WebSite:
+- URL: https://github.com/nf-core/pgdb
+  name: nf-core/pgdb
