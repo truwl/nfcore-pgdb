@@ -1,0 +1,407 @@
+parameter_meta:
+  pgdb.add_reference:
+    description: Add the reference proteome to the file
+    group: ensembl_canonical_proteomes
+    help: ''
+    hidden: false
+  pgdb.ensembl_downloader_config:
+    description: Path to configuration file for ENSEMBL download parameters
+    group: ensembl_canonical_proteomes
+    help: ''
+    hidden: false
+  pgdb.ensembl_config:
+    description: Path to configuration file for parameters in generating protein databases
+      from ENSMEBL sequences
+    group: ensembl_canonical_proteomes
+    help: ''
+    hidden: false
+  pgdb.gencode_url:
+    description: URL for downloading GENCODE datafiles
+    group: ensembl_canonical_proteomes
+    help: ''
+    hidden: false
+  pgdb.ensembl_name:
+    description: Taxonomic term for the species to download from ENSEMBL
+    group: ensembl_canonical_proteomes
+    help: ''
+    hidden: false
+  pgdb.ncrna:
+    description: Generate protein database from non-coding RNA
+    group: non_canonical_proteome_parameters
+    help: ''
+    hidden: false
+  pgdb.pseudogenes:
+    description: Generate protein database from pseudogenes
+    group: non_canonical_proteome_parameters
+    help: ''
+    hidden: false
+  pgdb.altorfs:
+    description: Generate alternative ORFs from canonical proteins
+    group: non_canonical_proteome_parameters
+    help: ''
+    hidden: false
+  pgdb.ensembl:
+    description: Download ENSEMBL variants and generate protein database
+    group: non_canonical_proteome_parameters
+    help: ''
+    hidden: false
+  pgdb.vcf:
+    description: Enable translation of a given VCF file
+    group: custom_vcf_based_variant_proteomes
+    help: ''
+    hidden: false
+  pgdb.vcf_file:
+    description: VCF file path to be translated. Generate variants proteins by modifying
+      sequences of affected transcripts.
+    group: custom_vcf_based_variant_proteomes
+    help: ''
+    hidden: false
+  pgdb.af_field:
+    description: Allele frequency identifier string in VCF Info column, if no AF info
+      is given set it to empty.
+    group: custom_vcf_based_variant_proteomes
+    help: ''
+    hidden: false
+  pgdb.cbioportal:
+    description: Download cBioPortal studies and generate protein database
+    group: cbioportal_variant_proteomes
+    help: ''
+    hidden: false
+  pgdb.cbioportal_accepted_values:
+    description: Specify a tissue type to limit the cBioPortal mutations to a particular
+      caner type
+    group: cbioportal_variant_proteomes
+    help: ''
+    hidden: false
+  pgdb.cbioportal_filter_column:
+    description: Specify a column from the clinical sample file to be used for filtering
+      records
+    group: cbioportal_variant_proteomes
+    help: ''
+    hidden: false
+  pgdb.cbioportal_study_id:
+    description: Download mutations from a specific study in cbiportal default is
+      all which downloads mutations from all studies
+    group: cbioportal_variant_proteomes
+    help: ''
+    hidden: false
+  pgdb.cbioportal_config:
+    description: cBioPortal configuration file
+    group: cbioportal_variant_proteomes
+    help: ''
+    hidden: false
+  pgdb.cosmic:
+    description: Download COSMIC mutation files and generate protein database
+    group: cosmic_variant_proteomes
+    help: ''
+    hidden: false
+  pgdb.cosmic_celllines:
+    description: Download COSMIC cell line files and generate protein database
+    group: cosmic_variant_proteomes
+    help: ''
+    hidden: false
+  pgdb.cosmic_user_name:
+    description: User name (or email) for COSMIC account
+    group: cosmic_variant_proteomes
+    help: ''
+    hidden: false
+  pgdb.cosmic_password:
+    description: Password for COSMIC account
+    group: cosmic_variant_proteomes
+    help: ''
+    hidden: false
+  pgdb.cosmic_config:
+    description: Path to configuration file for parameters in generating
+    group: cosmic_variant_proteomes
+    help: ''
+    hidden: false
+  pgdb.cosmic_cancer_type:
+    description: Specify a tissue type to limit the COSMIC mutations to a particular
+      caner type
+    group: cosmic_variant_proteomes
+    help: ''
+    hidden: false
+  pgdb.cosmic_cellline_name:
+    description: Specify a sample name to limit the COSMIC cell line mutations to
+      a particular  cell line
+    group: cosmic_variant_proteomes
+    help: ''
+    hidden: false
+  pgdb.gnomad:
+    description: Add gNOMAD variants to the database
+    group: gnomad_variant_proteomes
+    help: ''
+    hidden: false
+  pgdb.gnomad_file_url:
+    description: gNOMAD url
+    group: gnomad_variant_proteomes
+    help: ''
+    hidden: false
+  pgdb.decoy:
+    description: Append the decoy proteins to the database
+    group: decoy_generation
+    help: ''
+    hidden: false
+  pgdb.decoy_prefix:
+    description: String to be used as prefix for the generated decoy sequences
+    group: decoy_generation
+    help: ''
+    hidden: false
+  pgdb.decoy_method:
+    description: Method used to generate the decoy database
+    group: decoy_generation
+    help: ''
+    hidden: false
+  pgdb.decoy_enzyme:
+    description: Enzyme used to generate the decoy
+    group: decoy_generation
+    help: ''
+    hidden: false
+  pgdb.protein_decoy_config:
+    description: Configuration file to perform the decoy generation
+    group: decoy_generation
+    help: ''
+    hidden: false
+  pgdb.clean_database:
+    description: Clean the database for stop codons, short protein sequences
+    group: clean_and_process_database
+    help: ''
+    hidden: false
+  pgdb.minimum_aa:
+    description: Minimum number of AminoAcids for a protein to be included in the
+      database
+    group: clean_and_process_database
+    help: ''
+    hidden: false
+  pgdb.add_stop_codons:
+    description: If an stop codons is found, create two proteins from it
+    group: clean_and_process_database
+    help: ''
+    hidden: false
+  pgdb.outdir:
+    description: The output directory where the results will be saved.
+    group: input_output_options
+    help: ''
+    hidden: false
+  pgdb.email:
+    description: Email address for completion summary.
+    group: input_output_options
+    help: Set this parameter to your e-mail address to get a summary e-mail with details
+      of the run sent to you when the workflow exits. If set in your user config file
+      (`~/.nextflow/config`) then you don't need to specify this on the command line
+      for every run.
+    hidden: false
+  pgdb.final_database_protein:
+    description: Filename for the final protein database
+    group: input_output_options
+    help: ''
+    hidden: false
+  pgdb.help:
+    description: Display help text.
+    group: generic_options
+    help: ''
+    hidden: true
+  pgdb.publish_dir_mode:
+    description: Method used to save pipeline results to output directory.
+    group: generic_options
+    help: The Nextflow `publishDir` option specifies which intermediate files should
+      be saved to the output directory. This option tells the pipeline what method
+      should be used to move these files. See [Nextflow docs](https://www.nextflow.io/docs/latest/process.html#publishdir)
+      for details.
+    hidden: true
+  pgdb.validate_params:
+    description: Boolean whether to validate parameters against the schema at runtime
+    group: generic_options
+    help: ''
+    hidden: true
+  pgdb.email_on_fail:
+    description: Email address for completion summary, only when pipeline fails.
+    group: generic_options
+    help: This works exactly as with `--email`, except emails are only sent if the
+      workflow is not successful.
+    hidden: true
+  pgdb.plaintext_email:
+    description: Send plain-text email instead of HTML.
+    group: generic_options
+    help: Set to receive plain-text e-mails instead of HTML formatted.
+    hidden: true
+  pgdb.max_multiqc_email_size:
+    description: File size limit when attaching MultiQC reports to summary emails.
+    group: generic_options
+    help: If file generated by pipeline exceeds the threshold, it will not be attached.
+    hidden: true
+  pgdb.monochrome_logs:
+    description: Do not use coloured log outputs.
+    group: generic_options
+    help: Set to disable colourful command line output and live life in monochrome.
+    hidden: true
+  pgdb.tracedir:
+    description: Directory to keep pipeline Nextflow logs and reports.
+    group: generic_options
+    help: ''
+    hidden: true
+  pgdb.show_hidden_params:
+    description: Show all params when using `--help`
+    group: generic_options
+    help: By default, parameters set as _hidden_ in the schema are not shown on the
+      command line when a user runs with `--help`. Specifying this option will tell
+      the pipeline to show all parameters.
+    hidden: true
+  pgdb.max_cpus:
+    description: Maximum number of CPUs that can be requested    for any single job.
+    group: max_job_request_options
+    help: Use to set an upper-limit for the CPU requirement for each process. Should
+      be an integer e.g. `--max_cpus 1`
+    hidden: true
+  pgdb.max_memory:
+    description: Maximum amount of memory that can be requested for any single job.
+    group: max_job_request_options
+    help: Use to set an upper-limit for the memory requirement for each process. Should
+      be a string in the format integer-unit e.g. `--max_memory '8.GB'`
+    hidden: true
+  pgdb.max_time:
+    description: Maximum amount of time that can be requested for any single job.
+    group: max_job_request_options
+    help: Use to set an upper-limit for the time requirement for each process. Should
+      be a string in the format integer-unit e.g. `--max_time '2.h'`
+    hidden: true
+  pgdb.custom_config_version:
+    description: Git commit id for Institutional configs.
+    group: institutional_config_options
+    help: 'Provide git commit id for custom Institutional configs hosted at `nf-core/configs`.
+      This was implemented for reproducibility purposes. Default: `master`.
+
+
+      ```bash
+
+      ## Download and use config file with following git commit id
+
+      --custom_config_version d52db660777c4bf36546ddb188ec530c3ada1b96
+
+      ```'
+    hidden: true
+  pgdb.custom_config_base:
+    description: Base directory for Institutional configs.
+    group: institutional_config_options
+    help: 'If you''re running offline, nextflow will not be able to fetch the institutional
+      config files from the internet. If you don''t need them, then this is not a
+      problem. If you do need them, you should download the files from the repo and
+      tell nextflow where to find them with the `custom_config_base` option. For example:
+
+
+      ```bash
+
+      ## Download and unzip the config files
+
+      cd /path/to/my/configs
+
+      wget https://github.com/nf-core/configs/archive/master.zip
+
+      unzip master.zip
+
+
+      ## Run the pipeline
+
+      cd /path/to/my/data
+
+      nextflow run /path/to/pipeline/ --custom_config_base /path/to/my/configs/configs-master/
+
+      ```
+
+
+      > Note that the nf-core/tools helper package has a `download` command to download
+      all required pipeline files + singularity containers + institutional configs
+      in one go for you, to make this process easier.'
+    hidden: true
+  pgdb.hostnames:
+    description: Institutional configs hostname.
+    group: institutional_config_options
+    help: ''
+    hidden: true
+  pgdb.config_profile_name:
+    description: Institutional config name.
+    group: institutional_config_options
+    help: ''
+    hidden: true
+  pgdb.config_profile_description:
+    description: Institutional config description.
+    group: institutional_config_options
+    help: ''
+    hidden: true
+  pgdb.config_profile_contact:
+    description: Institutional config contact information.
+    group: institutional_config_options
+    help: ''
+    hidden: true
+  pgdb.config_profile_url:
+    description: Institutional config URL link.
+    group: institutional_config_options
+    help: ''
+    hidden: true
+parameter_group:
+  ensembl_canonical_proteomes:
+    description: Add ENSEMBL canonical proteomes
+    help: null
+    title: ENSEMBL canonical proteomes
+  non_canonical_proteome_parameters:
+    description: Non canonical proteins generation parameters
+    help: null
+    title: Non canonical proteome parameters
+  custom_vcf_based_variant_proteomes:
+    description: Proteins generated using an input VCF
+    help: null
+    title: Custom VCF-based variant proteomes
+  cbioportal_variant_proteomes:
+    description: cBioportal variant parameters
+    help: null
+    title: cBioportal variant proteomes
+  cosmic_variant_proteomes:
+    description: COSMIC variant proteins parameters
+    help: null
+    title: COSMIC variant proteomes
+  gnomad_variant_proteomes:
+    description: ''
+    help: null
+    title: GNOMAD variant proteomes
+  decoy_generation:
+    description: Generate decoy proteins and attach them to the final protein database
+    help: null
+    title: Decoy generation
+  clean_and_process_database:
+    description: Clean and process the resulted database
+    help: null
+    title: Clean and process database
+  input_output_options:
+    description: Define where the pipeline should find input data and save output
+      data.
+    help: null
+    title: Input/output options
+  generic_options:
+    description: Less common options for the pipeline, typically set in a config file.
+    help: 'These options are common to all nf-core pipelines and allow you to customise
+      some of the core preferences for how the pipeline runs.
+
+
+      Typically these options would be set in a Nextflow config file loaded for all
+      pipeline runs, such as `~/.nextflow/config`.'
+    title: Generic options
+  max_job_request_options:
+    description: Set the top limit for requested resources for any single job.
+    help: 'If you are running on a smaller system, a pipeline step requesting more
+      resources than are available may cause the Nextflow to stop the run with an
+      error. These options allow you to cap the maximum resources requested by any
+      single job so that the pipeline will run on your system.
+
+
+      Note that you can not _increase_ the resources requested by any job using these
+      options. For that you will need your own configuration file. See [the nf-core
+      website](https://nf-co.re/usage/configuration) for details.'
+    title: Max job request options
+  institutional_config_options:
+    description: Parameters used to describe centralised config profiles. These should
+      not be edited.
+    help: The centralised nf-core configuration profiles use a handful of pipeline
+      parameters to describe themselves. This information is then printed to the Nextflow
+      log when you run a pipeline. You should not need to change these values when
+      you run a pipeline.
+    title: Institutional config options
